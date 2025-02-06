@@ -20,7 +20,6 @@ async def process_chunk(
                     instruction_type=instruction_type,
                     response_requirements=settings.CONF['response_requirements'],
                     domain=settings.CONF['domain'],
-                    document=document,
                     instruction=instruction,
                     requirements=REQUIREMENTS,
                     output_language=settings.CONF['output_language']

@@ -30,6 +30,7 @@ async def process_chunk(
                         domain=domain,
                         number_questions_per_openai_call=settings.CONF['number_questions_per_openai_call'],
                         content=content,
+                        instruction_requirements=settings.CONF['instruction_requirements'],
                         instruction_type=instruction_type,
                         requirements=requirements,
                         output_language=output_language
