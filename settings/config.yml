@@ -1,0 +1,18 @@
+data:
+  chunks: "data/chunks" # folder saving your pretraining. Format: {"text": the text}
+  instructions: "data/instructions/tmp" # folder saving the temperature instructions
+  responses: "data/responses/tmp" # folder saving the temperature respective responses
+  sft_data: "data/sft_data/tmp" # folder saving the final syntheic data
+
+domain: Văn kiện Đảng Cộng sản Việt Nam # put the domain of your data here
+output_language: Vietnamese  # language of synthetic data
+instruction_requirements: "" # additional requirements about content. None would use the default settings.
+response_requirements: "" # additional requirements about content. None would use the default settings.
+
+number_questions_per_openai_call: 2 # number of questions per question type.
+number_questions_per_chunk: 2 # total questions/chunks <= number_questions_per_openai_call * number_questions_per_chunk. The more number_questions_per_chunk, the more diversity of tasks. <10 is recommended.
+
+filter_instructions_first: True # Filter instructions before synthesize responses
+
+llm: gpt-4o-mini # llms name gpt-4o-mini/gpt-4o
+batch_size: 30 # number of samples are synthesized at the same time.
