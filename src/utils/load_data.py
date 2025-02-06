@@ -33,7 +33,7 @@ def get_random_tasks(instruction_type, k=1):
 
     tasks_description = ""
     for task in selected_tasks:
-        tasks_description += f"Task Name: {task['name']}\nDescription: {task['description']}\n\n"
+        tasks_description += f"Task Name: {task['name']}\n Description: {task['description']}\n"
     return tasks_description
 
 import os

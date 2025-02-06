@@ -9,7 +9,7 @@ from src.prompts.instructions import INSTRUCTION_GENERATION, INSTRUCTION_TYPE, R
 from configs.config import settings
 
 async def process_chunk(
-    content, openai_client, number_questions_per_chunk, output_language, instruction_requirements, response_requirements, domain, requirements ):
+    content, openai_client, number_questions_per_chunk, output_language, response_requirements, domain, requirements):
     try:
         instructions = []
         existing_instruction_types = set()
@@ -72,7 +72,6 @@ async def synthesize_instruction(file_name, batch_size=settings.CONF['batch_size
             line['context'], openai_client,
             number_questions_per_chunk=settings.CONF['number_questions_per_chunk'],
             output_language=settings.CONF['output_language'],
-            instruction_requirements=settings.CONF['instruction_requirements'],
             response_requirements=settings.CONF['response_requirements'],
             domain=settings.CONF['domain'],
             requirements=REQUIREMENTS
